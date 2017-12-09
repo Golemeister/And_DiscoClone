@@ -53,7 +53,7 @@ public class ClubActivity extends AppCompatActivity {
 
         RelativeLayout rlEvent= new RelativeLayout(this);
         LinearLayout.LayoutParams lllp= new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,dpToPx(200));
-        rlEvent.setBackgroundColor(Color.LTGRAY);
+        rlEvent.setBackgroundColor(Color.GRAY);
         rlEvent.setLayoutParams(lllp);
 
         LinearLayout llDate=new LinearLayout(this);
@@ -93,18 +93,19 @@ public class ClubActivity extends AppCompatActivity {
         TextView tvEventTitle= new TextView(this);
         tvEventTitle.setId(R.id.tvEventTitle);
         tvEventTitle.setText(title);
-        tvEventTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        tvEventTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
         rllp= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         rllp.addRule(RelativeLayout.RIGHT_OF,R.id.ivEvent);
         rllp.addRule(RelativeLayout.ALIGN_PARENT_END);
         rllp.addRule(RelativeLayout.BELOW,R.id.llDate);
+        rllp.setMargins(dpToPx(0),dpToPx(5),dpToPx(0),dpToPx(0));
         tvEventTitle.setLayoutParams(rllp);
         rlEvent.addView(tvEventTitle);
 
         TextView tvEventDescription = new TextView(this);
         tvEventDescription.setId(R.id.tvEventDescription);
         tvEventDescription.setText(description);
-        tvEventDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        tvEventDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
         rllp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         rllp.addRule(RelativeLayout.RIGHT_OF,R.id.ivEvent);
         rllp.addRule(RelativeLayout.ALIGN_PARENT_END);
@@ -118,9 +119,11 @@ public class ClubActivity extends AppCompatActivity {
         btnTables.setText("Tables");
         btnTables.setAllCaps(true);
         btnTables.setBackgroundResource(R.drawable.background_border);
-        rllp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        rllp = new RelativeLayout.LayoutParams(dpToPx(80),ViewGroup.LayoutParams.WRAP_CONTENT);
         rllp.addRule(RelativeLayout.RIGHT_OF,R.id.ivEvent);
-        rllp.addRule(RelativeLayout.BELOW,R.id.tvEventDescription);
+        //rllp.addRule(RelativeLayout.BELOW,R.id.tvEventDescription);//
+        rllp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        rllp.setMargins(0,0,dpToPx(12),dpToPx(12));
         btnTables.setLayoutParams(rllp);
         rlEvent.addView(btnTables);
 
@@ -128,18 +131,22 @@ public class ClubActivity extends AppCompatActivity {
         btnGuest.setText("GuestList");
         btnGuest.setId(R.id.btnGuest);
         btnGuest.setBackgroundResource(R.drawable.background_border);
-        rllp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        rllp = new RelativeLayout.LayoutParams(dpToPx(80),ViewGroup.LayoutParams.WRAP_CONTENT);
         rllp.addRule(RelativeLayout.RIGHT_OF,R.id.btnTables);
-        rllp.addRule(RelativeLayout.BELOW,R.id.tvEventDescription);
+        //rllp.addRule(RelativeLayout.BELOW,R.id.tvEventDescription);
+        rllp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        rllp.setMargins(0,0,dpToPx(12),dpToPx(12));
         btnGuest.setLayoutParams(rllp);
         rlEvent.addView(btnGuest);
 
         Button btnTickets = new Button(this);
         btnTickets.setText("Tickets");
         btnTickets.setBackgroundResource(R.drawable.background_border);
-        rllp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        rllp = new RelativeLayout.LayoutParams(dpToPx(80),ViewGroup.LayoutParams.WRAP_CONTENT);
         rllp.addRule(RelativeLayout.RIGHT_OF,R.id.btnGuest);
-        rllp.addRule(RelativeLayout.BELOW,R.id.tvEventDescription);
+        //rllp.addRule(RelativeLayout.BELOW,R.id.tvEventDescription);
+        rllp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        rllp.setMargins(0,0,dpToPx(12),dpToPx(12));
         btnTickets.setLayoutParams(rllp);
         rlEvent.addView(btnTickets);
         return rlEvent;
