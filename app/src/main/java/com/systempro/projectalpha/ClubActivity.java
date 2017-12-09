@@ -38,8 +38,9 @@ public class ClubActivity extends AppCompatActivity {
 
         LinearLayout llRoot=(LinearLayout)findViewById(R.id.rlRoot);
         RelativeLayout rlEvent1 = addEvent("Prvi event","Hesto","4.11.2017","");
-        RelativeLayout rlEvent2 = addEvent("Jos nesto,MARIJAN")
+        RelativeLayout rlEvent2 = addEvent("Jos nesto","MARIJAN","12.3.2018","");
         llRoot.addView(rlEvent1);
+        llRoot.addView(rlEvent2);
 
     }
     private RelativeLayout addEvent(String title,String description,String date,String dow){
