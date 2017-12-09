@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_clubs"
+            android:icon="@drawable/nav_clubs"
+            android:title="Clubs" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/nav_events"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_promo"
+            android:icon="@drawable/nav_promo"
+            android:title="Promo" />
+        <item
+            android:id="@+id/nav_booking"
+            android:icon="@drawable/nav_booking"
+            android:title="Bookings" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/nav_settings"
+                android:title="General" />
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/nav_account"
+                android:title="Account" />
+        </menu>
+    </item>
+
+</menu>
