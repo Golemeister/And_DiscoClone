@@ -1,5 +1,6 @@
 package com.systempro.projectalpha;
 
+import android.accounts.*;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -113,9 +114,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_booking) {
             fragmentClass = BookingsFragment.class;
         } else if (id == R.id.nav_settings) {
-
+            fragmentClass = SettingsFragment.class;
         } else if (id == R.id.nav_account) {
-
+            fragmentClass = AccountFragment.class;
         }
 
 

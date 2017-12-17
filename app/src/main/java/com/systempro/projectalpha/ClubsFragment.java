@@ -70,7 +70,8 @@ public class ClubsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         View rootView = inflater.inflate(R.layout.fragment_clubs, container, false);
+        getActivity().setTitle("Clubs");
+        View rootView = inflater.inflate(R.layout.fragment_clubs, container, false);
 
         LinearLayout llWrapper = (LinearLayout)rootView.findViewById(R.id.llWrapper);
 

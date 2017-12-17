@@ -1,13 +1,20 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.systempro.projectalpha.PromoFragment">
+    tools:context="com.systempro.projectalpha.PromoFragment"
+    android:orientation ="vertical"
+    android:padding = "10dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="promo" />
+        android:id = "@+id/etPromoCode"
+        android:hint="Promo code"/>
 
-</FrameLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+</LinearLayout>
